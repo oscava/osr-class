@@ -1,0 +1,27 @@
+{
+  "name": "osr-class",
+  "version": "0.1.1",
+  "description": "class 4 js",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oscava/osr-class.git"
+  },
+  "keywords": [
+    "class",
+    "js"
+  ],
+  "author": "cava.zhang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oscava/osr-class/issues"
+  },
+  "readmeFile": "README.md",
+  "homepage": "https://github.com/oscava/osr-class#readme",
+  "directories": {
+    "test": "test"
+  }
+}
