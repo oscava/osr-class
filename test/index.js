@@ -1,5 +1,7 @@
 var Class = require("../");
 
+console.log(Class);
+
 var EventEmitter = require("events").EventEmitter;
 
 var Person = Class.extends({
