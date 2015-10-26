@@ -10,6 +10,8 @@
 ####bower
 	bower insall osr-class
 
+>本Class库中，使用$作为构造函数
+
 ###Example
 	
 	var Class = require("osr-class");
@@ -18,6 +20,7 @@
 		name:"person",
 		sex:1,
 		age:28,
+		//构造函数
 		$:function(inobj,pm2){
 			for(var key in inobj){
 				this[key] = inobj[key];
