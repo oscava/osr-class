@@ -1,7 +1,5 @@
 var Class = require("../");
 
-console.log(Class);
-
 var EventEmitter = require("events").EventEmitter;
 
 var Person = Class.extends({
@@ -58,52 +56,52 @@ var Marry = new Girl({
 
 Marry.sayHello("I like singing");
 
-var Emitter = Class.extends(EventEmitter);
+// var Emitter = Class.extends(EventEmitter);
 
-var CallMe = Emitter.extends({
-	ring:function(from){
-		this.emit("ring",from);
-	},
-	handUp:function(){
-		this.isAnswer = false;
-		this.emit("handup");
-	},
-	answer:function(msg){
-		this.emit("answer",msg);
-	}
-})
+// var CallMe = Emitter.extends({
+	// ring:function(from){
+		// this.emit("ring",from);
+	// },
+	// handUp:function(){
+		// this.isAnswer = false;
+		// this.emit("handup");
+	// },
+	// answer:function(msg){
+		// this.emit("answer",msg);
+	// }
+// })
 
-var callme = new CallMe();
-callme.on("ring",function(from){
-	this.from = from;
-	if(from=="Tom"){
-		this.handUp();
-	}else{
-		this.isAnswer = true;
-		console.log("me->%s:Oh , Hello, %s",from,from);
-	}
-});
+// var callme = new CallMe();
+// callme.on("ring",function(from){
+	// this.from = from;
+	// if(from=="Tom"){
+		// this.handUp();
+	// }else{
+		// this.isAnswer = true;
+		// console.log("me->%s:Oh , Hello, %s",from,from);
+	// }
+// });
 
-callme.on("handup",function(){
-	console.log("me:Handup,Keep doing my thing.");
-})
+// callme.on("handup",function(){
+	// console.log("me:Handup,Keep doing my thing.");
+// })
 
-callme.on("answer",function(msg){
-	if(!this.isAnswer){
-		console.log("me->%s:Already hand up ~",this.from);
-		return;
-	}
-	if(msg=="Borrow money"){
-		this.handUp();
-	}else{
-		console.log("%s->me:%s",this.from,msg);
-		console.log("me->%s: Hello,%s",this.from,msg);
-	}
-})
+// callme.on("answer",function(msg){
+	// if(!this.isAnswer){
+		// console.log("me->%s:Already hand up ~",this.from);
+		// return;
+	// }
+	// if(msg=="Borrow money"){
+		// this.handUp();
+	// }else{
+		// console.log("%s->me:%s",this.from,msg);
+		// console.log("me->%s: Hello,%s",this.from,msg);
+	// }
+// })
 
-callme.ring("Tom");
-callme.answer("How are u !");
-callme.ring("Marry");
-callme.answer("How are u !");
-callme.answer("Borrow money");
+// callme.ring("Tom");
+// callme.answer("How are u !");
+// callme.ring("Marry");
+// callme.answer("How are u !");
+// callme.answer("Borrow money");
 
