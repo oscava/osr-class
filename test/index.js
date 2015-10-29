@@ -55,7 +55,26 @@ var Marry = new Girl({
 
 Marry.sayHello("I like singing");
 
-// var Emitter = Class.extends(EventEmitter);
+var Emitter = Class.extends(EventEmitter);
+
+var Emitter1 = Emitter.extends({
+	$:function(){
+		this.on("jj",function(){
+			console.log(arguments);
+		});
+	},
+	doJJ:function(){
+		this.emit("jj",Date.now());
+	}
+});
+
+var Emitter2 = Emitter1.extends({
+	
+});
+
+var jj2 = new Emitter2();
+
+jj2.doJJ();
 
 // var CallMe = Emitter.extends({
 	// ring:function(from){
